@@ -8,7 +8,7 @@ if number < 0:
     if num > 5:
         print(f"greater than 5")
     elif num == 0:
-        print("is 0")
+        print("0")
     else:
         print("less than 6 and not 0")
 
