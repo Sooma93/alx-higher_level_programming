@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-o = ""
-for c in range(ord('Z'), ord('A') - 1, -1):
-        o += f'{chr(c).lower()}' if (ord('z') - 
-            c) % 2 == 0 else f'{chr(c)}'
-        print(o, end="")
+for i in range(25, -1, -1):
+        c = i + ord('A')
+        if i % 2 == 1:
+            c += 32
+            print("{:c}".format(c), end="")
