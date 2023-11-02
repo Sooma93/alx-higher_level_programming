@@ -9,12 +9,12 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
     i = sys.argv[2]
     if i == "+":
-        print("{} + {} = {}".format(a, b, add(a, b))
+        print("{} + {} = {}".format(a, b, add(a, b)))
     elif i == "-":
-        print("{} - {} = {}".format(a, b, sub(a, b))
+        print("{} - {} = {}".format(a, b, sub(a, b)))
     elif i == "*":
-        print("{} * {} = {}".format(a, b, mul(a, b))
+        print("{} * {} = {}".format(a, b, mul(a, b)))
     elif i == "/":
-        print("{} / {} = {}".format(a, b, div(a, b))
+        print("{} / {} = {}".format(a, b, div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
