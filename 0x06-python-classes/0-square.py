@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-""" the squre class"""
+"""
+define squre class
+"""
 
 
-class square:
-    """square"""
+class Square:
+    """
+    this class represent simple square
+    """
     pass
