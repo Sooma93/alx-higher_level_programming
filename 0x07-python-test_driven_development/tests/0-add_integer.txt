@@ -1,36 +1,48 @@
-
-Import function from model:
+Import function from module:
 
     >>> add_integer = __import__('0-add_integer').add_integer
 
+Test two integer:
+
+    >>> add_integer(2, 3)
+    5
+
 Adding two integers returns the sum of two integers
+
     >>> add_integer(7, 5)
     12
 
 Two floats returns the the sum of two floats
-    >>> add_integer(2.5, 5.5)
-    8
+
+    >>> add_integer(2.6, 5.5)
+    7
 
 An integer and float returns the sum of two numbers
-    >>> add_integer(3, 3.5)
-    6.5
+
+    >>> add_integer(3.5, 3)
+    6
 
 Positive integer and negitive integer and return the sum of numbers
+
     >>> add_integer(-5, 10)
     5
 
 Two negtive numbers and return the sum of numbers
+
     >>> add_integer(-4, -3)
     -7
 
-The function raises a TypeError if a is not integer or float
-    >>> add_integer("2", 3)
-    Traceback(most resent call last)
-    ...
-    TypeError: a must be integer
+Non integers
+=============
 
-The function raises a TypeError if b is not integer or float
-    >>> add_integer(2, "3")
-    Traceback(most resent call last)
-    ...
-    TypeError: b must be integer
+Test integer and string
+    >>> add_integer("hello", 2)
+    Traceback (most recent call last):
+               ...
+    TypeError: a must be an integer
+
+Test two string
+    >>> add_integer(5, "school")
+    Traceback (most recent call last):
+               ...
+    TypeError: b must be an integer
