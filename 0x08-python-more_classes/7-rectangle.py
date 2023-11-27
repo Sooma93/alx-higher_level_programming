@@ -78,7 +78,16 @@ class Rectangle:
         """
         if not self.width or not self.height:
             return ""
-        return "\n".join([str(self.print_symbol) * self.__width] * self.__height)
+        rectangle = ""
+        for c in range(self.__height):
+            for r in range(self.__width):
+                try:
+                    rectangle += str(self.print_symbol)
+                except Exception:
+                    rectangle += type(self).print_symbol
+            if c < self.__height - 1:
+                rectangle += "\n"
+        return rectangle
 
     def __repr__(self):
         """
