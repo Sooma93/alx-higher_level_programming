@@ -1,0 +1,62 @@
+Import module:
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Without delim test:
+    >>> text_indentation("Hello World")
+    Hello World
+
+Test empty string:
+    >>> text_indentation("    ")
+
+Test stringwith space:
+    >>> text_indentation("Hello      ")
+    Hello
+
+test space:
+    >>> text_indentation("       Hello")
+    Hello
+
+Test blank line:
+    >>> text_indentation("     ?:  :  ")
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test newline:
+    >>> text_indentation("\n")
+    <BLANKLINE>
+
+Test two lines:
+    >>> text_indentation("\n\n")
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test string with new line:
+    >>> text_indentation("Hello\n\n")
+    Hello
+    <BLANKLINE>
+
+Test all spaces:
+    >>> text_indentation("Hello   :    School   ?    Today.    morning    ")
+    Hello:
+    <BLANKLINE>
+    School?
+    <BLANKLINE>
+    Today.
+    <BLANKLINE>
+    morning
+
+Test no string:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test integer:
+    >>> text_indentation(98)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string

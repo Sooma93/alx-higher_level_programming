@@ -1,0 +1,25 @@
+Import module:
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Normal test:
+    >>> say_my_name("tasneem", "basit")
+    My name is tasneem basit
+
+Test two integer:
+    >>> say_my_name(77, 99)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Test intger:
+    >>> say_my_name("tasneem", 99)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+Test integer in first name:
+    >>> say_my_name(99, "tasneem")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
