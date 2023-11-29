@@ -46,3 +46,10 @@ Test two string
     Traceback (most recent call last):
                ...
     TypeError: b must be an integer
+
+Adding an integer number and a string
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+	      ...
+    TypeError: b must be an integer
+
