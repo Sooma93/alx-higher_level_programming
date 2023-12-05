@@ -4,7 +4,7 @@ from json to object
 """
 
 
-import json 
+import json
 
 
 def from_json_string(my_str):
