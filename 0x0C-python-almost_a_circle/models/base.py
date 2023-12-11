@@ -32,6 +32,16 @@ class Base:
         else:
             return dumps(list_dictionaries)
 
+     @staticmethod
+    def from_json_string(json_string):
+        """
+        string dictionary
+        """
+        if json_string is not None or not json_string:
+            return []
+        return loads(json_string)
+
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
@@ -41,12 +51,3 @@ class Base:
             list_objs = [o.to_dictionary() for o in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(list_objs))
-
-    @staticmethod
-    def from_json_string(json_string):
-        """
-        string dictionary
-        """
-        if json_string is not None or not json_string:
-            return []
-        return loads(json_string)
