@@ -22,7 +22,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    @staticmethod 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         json file dictonary
@@ -41,5 +41,3 @@ class Base:
             list_objs = [o.to_dictionary() for o in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(list_objs))
-
-
