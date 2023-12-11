@@ -32,12 +32,12 @@ class Base:
         else:
             return dumps(list_dictionaries)
 
-     @staticmethod
+    @staticmethod
     def from_json_string(json_string):
         """
         string dictionary
         """
-        if json_string is not None or not json_string:
+        if json_string is None or not json_string:
             return []
         return loads(json_string)
 
