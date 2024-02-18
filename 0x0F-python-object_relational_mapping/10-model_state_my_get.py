@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-prints State object from the database
+""" prints the State object with the name passed as argument from the database
 """
 import sys
 from model_state import Base, State
@@ -14,10 +13,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    instance = session.query(State).filter(State.name == argv[4]).first()
-
-    if instance is None:
-        print('Not found')
-    else:
-        print('{0}'.format(instance.id))
-
+    instance = session.query(State).filter(State.name == (sys.argv[4],))
+    try:
+        print(instance[0].id)
+    except IndexError:
+        print("Not found")
