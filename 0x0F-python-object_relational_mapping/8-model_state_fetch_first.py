@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-prints State object from the database 
+"""
+prints State object from the database
 """
 import sys
 from model_state import Base, State
