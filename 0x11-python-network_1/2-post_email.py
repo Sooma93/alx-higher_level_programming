@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-ython script that takes in a URL and an email, sends a POST request to the passed
+take in a URL and an email, sends a POST request to the passed
 """
 
 if __name__ == "__main__":
