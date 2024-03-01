@@ -2,11 +2,14 @@
 """
 cript that takes in a URL, sends a request to the URL
 """
-if __name__ == "__main__":
-    from sys import argv
-    from requests import post
+import sys
+import requests
 
-    url = argv[1]
-    email = argv[2]
-    re = post(url, {'email': email})
-    print(re.text)
+if __name__ == "__main__":
+    url = sys.argv[1]
+
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
+    else:
+        print(r.text)
